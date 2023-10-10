@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.Month;
+
 import main.java.list.OperacoesBasicas.ListaTarefa;
 import main.java.list.Ordenacao.OrdenacaoPessoa;
 import main.java.list.Pesquisa.CatalogoLivros;
@@ -5,6 +8,7 @@ import main.java.set.OperacoesBasicas.ConjuntoConvidados;
 import main.java.set.Ordencao.CadastroProdutos;
 import main.java.set.Pesquisa.AgendaContatos;
 import main.java.map.OperacoesBasicas.AgendaDeContatos;
+import main.java.map.Ordencao.AgendaEventos;
 import main.java.map.Pesquisa.EstoqueProdutos;
 
 
@@ -118,7 +122,7 @@ public class App {
         
       //MAP - ESTOQUE PRODUTOS
 
-        EstoqueProdutos estoque = new EstoqueProdutos();
+     /*    EstoqueProdutos estoque = new EstoqueProdutos();
 
         estoque.adicionarProduto(1L, "Caneta", 3d, 20);
         estoque.adicionarProduto(2L, "Lapis", 2d, 30);
@@ -131,7 +135,19 @@ public class App {
         System.out.println("Produto Mais barato: " + estoque.obterProdutoMaisBarato());
         System.out.println("Produto Mais caro: " + estoque.obterProdutoMaisCaro());
         System.out.println("Valor Total do estoque R$" + estoque.calculeValorTotalEstoque());
-        System.out.println("Produto com maior valor no estoque: " + estoque.obterProdutoMaiorQuantidadeValorTotalNoEstoque());
+        System.out.println("Produto com maior valor no estoque: " + estoque.obterProdutoMaiorQuantidadeValorTotalNoEstoque()); */
         
+        // MAP - AGENDA EVENTOS
+      AgendaEventos agendaEventos = new AgendaEventos();
+ 
+      agendaEventos.adicionarEvento(LocalDate.of(2023, Month.OCTOBER, 15), "Conferência de Tecnologia", "Palestrante renomado");
+      agendaEventos.adicionarEvento(LocalDate.of(2022, 7, 9), "Workshop de Programação", "Aula prática de desenvolvimento");
+      agendaEventos.adicionarEvento(LocalDate.of(2000, 1, 10), "Lançamento de Software", "Demonstração da nova versão");
+      agendaEventos.adicionarEvento(LocalDate.of(2023, Month.AUGUST, 28), "Hackathon de Inovação", "Competição de soluções criativas");
+      agendaEventos.adicionarEvento(LocalDate.of(2024, 9, 20), "Seminário de Inteligência Artificial", "Discussão sobre IA avançada");
+      
+      agendaEventos.exibirAgenda();
+      agendaEventos.obterProximoEvento();
+
     } 
 }
