@@ -1,7 +1,5 @@
 package main.java.list.Ordenacao;
 
-import java.util.Comparator;
-
 public class Pessoa implements Comparable<Pessoa> {
     private String nome;
     private int idade;
@@ -11,8 +9,6 @@ public class Pessoa implements Comparable<Pessoa> {
     public int compareTo(Pessoa p) {
         return Integer.compare(idade, p.getIdade());
     }
-
-
 
     public Pessoa(String nome, int idade, double altura) {
         this.nome = nome;

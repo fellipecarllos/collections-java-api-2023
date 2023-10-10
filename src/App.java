@@ -4,6 +4,9 @@ import main.java.list.Pesquisa.CatalogoLivros;
 import main.java.set.OperacoesBasicas.ConjuntoConvidados;
 import main.java.set.Ordencao.CadastroProdutos;
 import main.java.set.Pesquisa.AgendaContatos;
+import main.java.map.OperacoesBasicas.AgendaDeContatos;
+import main.java.map.Pesquisa.EstoqueProdutos;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -84,8 +87,7 @@ public class App {
         System.out.println(agendaContatos.AtualizarNumeroContato("Felipe Carlos", 000000000)); */
 
         //SET - CADASTRO PRODUTOS
-
-        CadastroProdutos cadastroProdutos = new CadastroProdutos();
+        /* CadastroProdutos cadastroProdutos = new CadastroProdutos();
         cadastroProdutos.adicionarProduto(1L, "Caneta", 2d, 20);
         cadastroProdutos.adicionarProduto(2L, "Lapis", 1d, 30);
         cadastroProdutos.adicionarProduto(3L, "Caderno", 21d, 10);
@@ -94,8 +96,42 @@ public class App {
 
 
         System.out.println(cadastroProdutos.exibirProdutosPorNome());
-        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco()); */
 
-    }
+         //MAP - AGENDA CONTATOS
 
+     /*    AgendaDeContatos agendaDeContatos = new AgendaDeContatos();
+
+        agendaDeContatos.exibirContatos();
+        agendaDeContatos.adicionarContato("Felipe", 12345678);
+        agendaDeContatos.adicionarContato("Ligia", 98881172);
+        agendaDeContatos.adicionarContato("Ligia", 44444444);
+        agendaDeContatos.adicionarContato("Karol", 888888888);
+        agendaDeContatos.adicionarContato("Rafael", 77777777);
+        agendaDeContatos.adicionarContato("Italo", 5555555);
+        agendaDeContatos.adicionarContato("Felipe Carlos", 222222222);
+
+        agendaDeContatos.exibirContatos();
+        agendaDeContatos.removerContato("Felipe");
+        agendaDeContatos.exibirContatos();
+        System.out.println(agendaDeContatos.pesquiserPorNome("Felipe Carlos")); */
+        
+      //MAP - ESTOQUE PRODUTOS
+
+        EstoqueProdutos estoque = new EstoqueProdutos();
+
+        estoque.adicionarProduto(1L, "Caneta", 3d, 20);
+        estoque.adicionarProduto(2L, "Lapis", 2d, 30);
+        estoque.adicionarProduto(3L, "Caderno", 21d, 10);
+        estoque.adicionarProduto(4L, "Borracha", 1d, 50);
+        estoque.adicionarProduto(5L, "Estojo", 5.5d, 10);
+
+        estoque.exibirProdutos();
+
+        System.out.println("Produto Mais barato: " + estoque.obterProdutoMaisBarato());
+        System.out.println("Produto Mais caro: " + estoque.obterProdutoMaisCaro());
+        System.out.println("Valor Total do estoque R$" + estoque.calculeValorTotalEstoque());
+        System.out.println("Produto com maior valor no estoque: " + estoque.obterProdutoMaiorQuantidadeValorTotalNoEstoque());
+        
+    } 
 }
